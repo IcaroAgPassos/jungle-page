@@ -105,11 +105,13 @@ body{
 .content-1{
     background-image: url(./img/background\ 1.jpg);
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .content-2{
     background-image: url(./img/background\ 2.jpg);
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .box-content{
@@ -172,7 +174,7 @@ body{
 }
 
 .text-2{
-    width: 46rem;
+    width: 40rem;
     height: 7rem;
 }
 
@@ -196,7 +198,9 @@ body{
     border: 2px solid #FFF;
     box-shadow: -10px 10px 4px 0px rgba(255, 255, 255, 0.13);
     transition: transform .5s;
+    cursor: pointer;
 }
+
 .card:nth-child(1){
     transform: translate(10rem, 10rem) skew(3deg, 3deg);
     z-index: 14;
@@ -230,8 +234,123 @@ body{
     transform: translate(-2rem, 15rem) skew(3deg, 3deg);
 }
 
+.content-2 .card:hover:nth-child(1){
+    transform: translate(15rem, -6rem) skew(3deg, 3deg);
+}
+.content-2 .card:hover:nth-child(2){
+    transform: translate(15rem, 14rem) skew(3deg, 3deg);
+}
+.content-2 .card:hover:nth-child(3){
+    transform: translate(-2rem, -6rem) skew(3deg, 3deg);
+}
+.content-2 .card:hover:nth-child(4){
+    transform: translate(-2rem, 14rem) skew(3deg, 3deg);
+}
+
+.box-3{
+    text-align: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+.title-box-3{
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    width:auto;
+    margin:1.2rem 0;
+}
+
+.title-box-3::after{
+    content: '';
+    display: flex;
+    position: absolute;
+    background-color: #fff;
+    width: 35rem;
+    height: .1rem;
+    margin-top: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.drop-biomes{
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.drop-1{
+    background-image: url(./img/bioma\ 1.jpg);
+}
+.drop-2{
+    background-image: url(./img/bioma\ 2.jpg);
+}
+.drop-3{
+    background-image: url(./img/bioma\ 3.jpg);
+}
+.drop-4{
+    background-image: url(./img/bioma\ 4.jpeg);
+}
+.drop-5{
+    background-image: url(./img/bioma\ 5.jpg);
+}
+.drop-6{
+    background-image: url(./img/bioma\ 6.jpg);
+}
 
 
+.title-drop-biomes{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 10rem;
+    margin: 2.7rem 0 6rem 0;
+}
+
+.left-text-biomes .title-drop-biomes, .left-text-biomes .text-biomes{
+    text-align: left;
+    margin-left: 3rem;
+}
 
 
+.right-text-biomes .title-drop-biomes, .right-text-biomes .text-biomes{
+    text-align: right;
+    margin-right: 3rem;
+}
 
+/* parte do footer */
+
+.f-footer{
+    margin-top: 2rem;
+    font-weight: 400;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #151515;
+}
+
+.r-rights{
+    font-size: 1.05rem;
+    letter-spacing: 0.02rem;
+}
+
+.icon-footer{
+    font-size: 1.8rem;
+    display: flex;
+    gap: .7rem;
+}
+
+.icon{
+    transition: color .2s;
+}
+
+.icon:hover{
+    color: #ffffff50;
+}
