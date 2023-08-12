@@ -114,6 +114,10 @@ body{
     background-size: cover;
 }
 
+.content-2:focus{
+    transition: scroll 1s;        
+}
+
 .box-content{
     display: flex;
     flex-direction: column;
