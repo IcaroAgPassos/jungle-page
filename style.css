@@ -53,8 +53,6 @@ body{
     font-size: 2.5rem;
     width: auto;
     z-index: 1;
-    justify-content: center;
-    align-items: center;
     position: relative;
     cursor: pointer;
 }
@@ -84,11 +82,29 @@ body{
 .list-menu-content{
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 4rem;
 }
 
 .menu-items{
     cursor: pointer;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
+}
+.menu-items::after{
+    content: '';
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 0rem;
+    height: .15rem;
+    bottom: 1.5rem;
+    transition: width .25s ease-in-out;
+}
+
+.menu-items:hover::after, .menu-items:focus::after{
+    width: 6rem;
 }
 
 /* primeira página */
@@ -102,6 +118,17 @@ body{
     align-items: center;
 }
 
+.div-section{
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    background-color: #03392770;
+    z-index: 10;
+    box-shadow: inset 0px -15px 15px #00000070, 
+                inset 0px 15px 15px #00000070;
+    opacity: .8;
+}
+
 .content-1{
     background-image: url(./img/background\ 1.jpg);
     background-attachment: fixed;
@@ -112,10 +139,6 @@ body{
     background-image: url(./img/background\ 2.jpg);
     background-attachment: fixed;
     background-size: cover;
-}
-
-.content-2:focus{
-    transition: scroll 1s;        
 }
 
 .box-content{
@@ -159,12 +182,6 @@ body{
     transition: all .2s;
 }
 
-.btn-box-content:hover{
-    box-shadow: 0px 0px 8px white;
-    color: black;
-    background-color: white;
-}
-
 .box-2{
     display: flex;
     flex-direction: row;
@@ -192,12 +209,32 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    align-items: end;
+}
+
+.btn-next-page{
+    font-size: 2rem;
+    border:2px solid white;
+    border-radius: 4rem;
+    width: 3rem;
+    height: 3rem;
+    transition: color .3s, box-shadow .3s;
+    display: flex;
+    padding: .5rem;
+    color: black;
+    background-color: #fff;
+}
+
+.btn-box-content:hover, .btn-next-page:hover {
+    box-shadow: 0px 0px 8px white;
+    color: black;
+    background-color: white;
 }
 
 .card{
     position: absolute;
-    width: 14rem;
-    height: 18rem;
+    width: 13rem;
+    height: 17rem;
     border-radius: 2.1875rem;
     border: 2px solid #FFF;
     box-shadow: -10px 10px 4px 0px rgba(255, 255, 255, 0.13);
@@ -226,29 +263,29 @@ body{
 }
 
 .content-2:hover .card:nth-child(1){
-    transform: translate(15rem, -5rem) skew(3deg, 3deg);
+    transform: translate(14rem, -4rem) skew(3deg, 3deg);
 }
 .content-2:hover .card:nth-child(2){
-    transform: translate(15rem, 15rem) skew(3deg, 3deg);
+    transform: translate(14rem, 15rem) skew(3deg, 3deg);
 }
 .content-2:hover .card:nth-child(3){
-    transform: translate(-2rem, -5rem) skew(3deg, 3deg);
+    transform: translate(-1rem, -4rem) skew(3deg, 3deg);
 }
 .content-2:hover .card:nth-child(4){
-    transform: translate(-2rem, 15rem) skew(3deg, 3deg);
+    transform: translate(-1rem, 15rem) skew(3deg, 3deg);
 }
 
 .content-2 .card:hover:nth-child(1){
-    transform: translate(15rem, -6rem) skew(3deg, 3deg);
+    transform: translate(14.5rem, -4.5rem) skew(3deg, 3deg);
 }
 .content-2 .card:hover:nth-child(2){
-    transform: translate(15rem, 14rem) skew(3deg, 3deg);
+    transform: translate(14.5rem, 14.5rem) skew(3deg, 3deg);
 }
 .content-2 .card:hover:nth-child(3){
-    transform: translate(-2rem, -6rem) skew(3deg, 3deg);
+    transform: translate(-.5rem, -4.5rem) skew(3deg, 3deg);
 }
 .content-2 .card:hover:nth-child(4){
-    transform: translate(-2rem, 14rem) skew(3deg, 3deg);
+    transform: translate(-.5rem, 14rem) skew(3deg, 3deg);
 }
 
 .box-3{
