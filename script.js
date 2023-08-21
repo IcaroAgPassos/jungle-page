@@ -1,12 +1,4 @@
-const firstSection = document.querySelector('.content-2');
-
-const myObserver = new IntersectionObserver((entrada) =>{
-    console.log(entrada);
-})
-
-myObserver.observe(firstSection);
-
-document.querySelectorAll('a[href^="#"]').forEach(ancora => {
+document.querySelectorAll('a[href^="#"]:not(.box-biomes)').forEach(ancora => {
     ancora.addEventListener('click', function (e) {
         e.preventDefault();
         
@@ -15,3 +7,11 @@ document.querySelectorAll('a[href^="#"]').forEach(ancora => {
         });
     });
 });
+document.querySelectorAll('.box-biomes').forEach(box => {
+    console.log(box.hash);
+    box.addEventListener('click', (event) => {
+        document.querySelectorAll('.biomes-card').forEach(card => card.classList.remove('active'))
+        document.querySelector(box.hash)?.classList?.add('active')
+        event.preventDefault();
+    })
+})

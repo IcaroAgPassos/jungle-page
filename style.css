@@ -121,24 +121,27 @@ body{
 .div-section{
     position: relative;
     width: 100%;
-    height: 4rem;
-    background-color: #03392770;
+    height: 6.5rem;
+    /* background-color: #03392770; */
+    background: linear-gradient(180deg, rgba(124, 152, 23, 0.50) 0.50%, rgba(3, 57, 39, 0.50) 100%);
     z-index: 10;
-    box-shadow: inset 0px -15px 15px #00000070, 
-                inset 0px 15px 15px #00000070;
-    opacity: .8;
+    /* box-shadow: inset 0px -15px 15px #00000070, 
+                inset 0px 15px 15px #00000070; */
+    opacity: .6;
 }
 
 .content-1{
     background-image: url(./img/background\ 1.jpg);
     background-attachment: fixed;
     background-size: cover;
+    box-shadow: inset 0 -5px 15px -3px #7c981780;
 }
 
 .content-2{
     background-image: url(./img/background\ 2.jpg);
     background-attachment: fixed;
     background-size: cover;
+    box-shadow: inset 0px 15px 15px #03392799;
 }
 
 .box-content{
@@ -291,6 +294,7 @@ body{
 .box-3{
     text-align: center;
     align-items: center;
+    justify-content: flex-start;
     gap: .3rem;
 }
 
@@ -314,55 +318,143 @@ body{
     transform: translateX(-50%);
 }
 
+.content-biomes {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .drop-biomes{
-    width: 80%;
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    gap: .3rem;
+}
+
+.box-biomes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.align-title-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 18rem;
+    height: auto;
+    justify-content: space-between;
+    z-index: 1;
+    transition: transform .3s ease-in-out;
+}
+
+.bg-box-biomes{
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    object-fit: cover;
+    filter: grayscale(45%) blur(.7px);
+    transition: filter .3s, transform .3s ease-in-out, border .3s;
+    border: 2px solid transparent;
+}
+
+.box-biomes:hover .bg-box-biomes, .box-biomes:hover .align-title-btn{
+    filter: grayscale(0) blur(0px);
+    transform: translateX(-1rem);
+}
+
+.box-biomes:hover .bg-box-biomes{
+    border: 2px solid white;
+}
+
+.title-drop-biomes, .biomes-card-title{
+    text-transform: uppercase;
+}
+
+.drop-btn{
+    font-size: 1.6rem;
+}
+
+.biomes-description{
+    border: 2px solid white;
+    border-radius: .6rem;
+    width: 50%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.drop-1{
-    background-image: url(./img/bioma\ 1.jpg);
+.biomes-card{
+    height: 100%;
+    display: none;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.drop-2{
-    background-image: url(./img/bioma\ 2.jpg);
+
+.biomes-card.active{
+    display: flex;
+    opacity: 1;
 }
-.drop-3{
-    background-image: url(./img/bioma\ 3.jpg);
+
+.biomes-card-title{
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
 }
-.drop-4{
-    background-image: url(./img/bioma\ 4.jpeg);
-}
-.drop-5{
-    background-image: url(./img/bioma\ 5.jpg);
-}
-.drop-6{
-    background-image: url(./img/bioma\ 6.jpg);
+
+.biomes-card-text{
+    text-align: justify;
+    width: 85%;
 }
 
 
-.title-drop-biomes{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    height: 10rem;
-    margin: 2.7rem 0 6rem 0;
+.biome-1{
+    background-image: url(/img/bioma\ 1.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-.left-text-biomes .title-drop-biomes, .left-text-biomes .text-biomes{
-    text-align: left;
-    margin-left: 3rem;
+.biome-2{
+    background-image: url(/img/bioma\ 2.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-
-.right-text-biomes .title-drop-biomes, .right-text-biomes .text-biomes{
-    text-align: right;
-    margin-right: 3rem;
+.biome-3{
+    background-image: url(/img/bioma\ 3.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-/* parte do footer */
+.biome-4{
+    background-image: url(/img/bioma\ 4.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.biome-5{
+    background-image: url(/img/bioma\ 5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.biome-6{
+    background-image: url(/img/bioma\ 6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* FOOTER ABAIXO */
 
 .f-footer{
     margin-top: 2rem;
