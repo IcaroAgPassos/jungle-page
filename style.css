@@ -395,11 +395,13 @@ body{
 
 .biomes-card{
     height: 100%;
-    display: none;
-    opacity: 1;
+    display:none;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 10;
+    overflow: hidden;
 }
 
 .biomes-card.active{
@@ -408,50 +410,33 @@ body{
 }
 
 .biomes-card-title{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0 0 2rem 0;
 }
 
 .biomes-card-text{
     text-align: justify;
     width: 85%;
+    font-size: 1.1rem;
+    z-index: 10;   
 }
 
-
-.biome-1{
-    background-image: url(/img/bioma\ 1.jpg);
-    background-position: center;
-    background-size: cover;
+.biomes-front{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 35rem;
 }
 
-.biome-2{
-    background-image: url(/img/bioma\ 2.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.biome-3{
-    background-image: url(/img/bioma\ 3.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.biome-4{
-    background-image: url(/img/bioma\ 4.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-
-.biome-5{
-    background-image: url(/img/bioma\ 5.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.biome-6{
-    background-image: url(/img/bioma\ 6.jpg);
-    background-position: center;
-    background-size: cover;
+.biome-bg-img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter:saturate(110%) blur(5px);
 }
 
 /* FOOTER ABAIXO */
