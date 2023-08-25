@@ -83,6 +83,7 @@ body{
     display: flex;
     list-style: none;
     gap: 4rem;
+    z-index: 10;
 }
 
 .menu-items{
@@ -130,7 +131,7 @@ body{
     z-index: 10;
     /* box-shadow: inset 0px -15px 15px #00000070, 
                 inset 0px 15px 15px #00000070; */
-    opacity: .6;
+    opacity: .2;
     display: block;
 }
 
