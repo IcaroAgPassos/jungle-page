@@ -370,12 +370,12 @@ body{
     border: 2px solid transparent;
 }
 
-.box-biomes:hover .bg-box-biomes, .box-biomes:hover .align-title-btn{
+.box-biomes:hover .bg-box-biomes, .box-biomes:hover .align-title-btn, .box-biomes:focus .bg-box-biomes, .box-biomes:focus .align-title-btn{
     filter: grayscale(0) blur(0px);
-    transform: translateX(-1rem);
+    transform: scale(1.04);
 }
 
-.box-biomes:hover .bg-box-biomes{
+.box-biomes:hover .bg-box-biomes, .box-biomes:focus .bg-box-biomes{
     border: 2px solid white;
 }
 
@@ -415,6 +415,8 @@ body{
     display: flex;
     opacity: 1;
 }
+
+/* ANIMAÇÃO DO CARD DESCRITIVO COM EFEITO DE OPACIDADE APENAS */
 
 @keyframes cardAnimationToAppear{
     0%{
